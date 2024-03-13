@@ -73,3 +73,109 @@ $answer /= 2;
 $answer -= $my_num;
 echo $answer;
 echo "<br /> <br />";
+
+
+// Task 14 "Математические функции"
+
+echo "Task 14 <br />";
+
+$temp1 = 10;
+$temp2 = 3;
+echo ($temp1 % $temp2);
+echo "<br />";
+
+if ($temp1 % $temp2 == 0)
+{
+    echo 'Делится ' .($temp1 / $temp2);
+    echo "<br />";
+}
+else
+{
+    echo 'Делится с остатком ' . ($temp1 % $temp2);
+    echo "<br />";
+}
+
+$st = pow(2, 10);
+echo $st . "<br />";
+$root = sqrt(245);
+echo $root . "<br />";
+$array = [4, 2, 5, 19, 13, 0, 10];
+$result = 0;
+foreach ($array as $elem)
+{
+    $result += pow($elem,2);
+}
+$root = sqrt($result);
+echo $root;
+
+$temp = 379;
+$root = sqrt($temp);
+echo $root . "<br />";
+
+echo round($root) . "<br />";
+echo round($root, 1) . "<br />";
+echo round($root, 2) . "<br />";
+
+$temp = 587;
+$root = sqrt($temp);
+$array = 
+[
+    'floor' => floor($root),
+    'ceil' => ceil($root)
+];
+
+echo $array['floor'] . " " . $array['ceil'] . "<br />";
+
+$array = [4, -2, 5, 19, -130, 0, 10];
+$min_num = min($array);
+echo $min_num . "<br />";
+$max_num = max($array);
+echo $max_num . "<br />";
+
+$rand_num = rand(1, 100);
+echo $rand_num . "<br />";
+$rand_arr = [];
+for ($i=0; $i<10; $i++);
+{
+    $rand_arr[$i] = rand(1, 100);
+}
+print_r($rand_arr);
+echo "<br />";
+
+$temp1 = -3;
+$temp2 = 7;
+$abs_dif = abs($temp1 - $temp2);
+echo $abs_dif . "<br />";
+$array = [1, 2, -1, -2, 3, -3];
+foreach($array as $elem)
+{
+    $array[$i] = abs($elem);
+}
+print_r($array);
+echo "<br />";
+
+$temp = 42;
+$arr_div = "";
+for ($i=1; $i<$temp; $i++){
+    if ($temp  % $i == 0)
+    {
+        $arr_div .= " ".$i;
+    }
+}
+echo $arr_div;
+echo "<br />";
+
+$array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+$sum = 0;
+$counter = 0;
+foreach ($array as $elem){
+    if ($sum > 10){
+        break;
+    }
+    else{
+        $sum += $elem;
+        $counter += 1;
+    }
+}
+echo $counter;
+echo "<br /><br />";
