@@ -17,3 +17,23 @@ $order .= ' queue';
  // Don't change the line below
  echo "\nYour order is: $very_bad_unclear_name.";
  echo "<br /> <br />";
+ 
+
+ // Task 2 "Числа"
+
+echo "Task 2 <br /> <br />";
+
+$temp1 = 7;
+echo $temp1;
+echo "<br />";
+
+$temp2 = 4.3;
+echo $temp2;
+echo "<br />";
+
+echo (10 + 2);
+echo "<br />";
+
+$last_month = 1187.23;
+$this_month = 1089.98;
+echo ($last_month - $this_month) . "<br /> <br />";
