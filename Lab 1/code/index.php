@@ -413,3 +413,29 @@ for ($i=0;$i<21;$i++)
     echo "<br />";
 }
 echo "<br />";
+
+
+// Task 20 "Комбинация функций"
+
+echo "Task 20 <br />";
+
+$array = [1, 2, 3, 4];
+echo (array_sum($array) / count($array)) . "<br />";
+
+$temp = 100;
+echo ($temp * ($temp + 1)) / 2 . "<br />";
+
+$array = [1, 4, 9, 16];
+print_r(array_map("sqrt", $array));
+echo "<br />";
+
+$numbers = range(1, 26);
+$keys = range('a', 'z');
+$array = array_combine($keys, $numbers);
+print_r($array);
+echo "<br />";
+
+$numbers = '1234567890';
+$temp = str_split($numbers, 2);
+$sum = array_sum($temp);
+echo $sum;
