@@ -179,3 +179,17 @@ foreach ($array as $elem){
 }
 echo $counter;
 echo "<br /><br />";
+
+
+// Task 15 "Функции"
+
+echo "Task 15 <br />";
+
+function printStringReturnNumber($str)
+{
+    echo $str . "<br />";
+    return strlen($str);
+}
+
+$my_num = printStringReturnNumber("123456");
+echo $my_num . "<br /><br />";
