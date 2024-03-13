@@ -193,3 +193,58 @@ function printStringReturnNumber($str)
 
 $my_num = printStringReturnNumber("123456");
 echo $my_num . "<br /><br />";
+
+
+// Task 16 "Функции"
+
+echo "Task 16 <br />";
+
+function increaseEnthusiasm($str)
+{
+    return $str . "!";
+}
+
+echo increaseEnthusiasm("Hello, world") . "<br />";
+
+function repeatThreeTimes($str)
+{
+    return $str . $str . $str;
+}
+
+echo repeatThreeTimes("abc d") . "<br />";
+
+echo increaseEnthusiasm(repeatThreeTimes("Queue")) . "<br />";
+
+function cut($str, $num = 10)
+{
+    return substr($str, 0, $num);
+}
+
+echo cut("abcdefg", 3) . "<br />";
+
+function recursivePrint($array, $index = 0) {
+    if ($index < count($array)) {
+        echo $array[$index] . ' ';
+        recursivePrint($array, $index + 1);
+    }
+}
+
+echo recursivePrint([1,2,3,4,5]) . "<br />";
+
+function sumNum($num)
+{
+    $count = 0;
+    while ($num) {
+        $count += $num % 10;
+        $num = (int)($num / 10);
+    }
+    if ($count > 9)
+    {
+        return sumNum($count);
+    }
+    else
+    {
+        return $count;
+    }
+}
+echo sumNum(123457) . "<br /> <br />";
