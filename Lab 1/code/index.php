@@ -333,3 +333,68 @@ foreach($arr as $elem)
 echo $temp . "<br />";
 echo $arr[$temp - 1] . "<br />";
 echo $arr[$temp - 2] . "<br /> <br />";
+
+
+// Task 18 "Конструкция if else"
+
+echo "Task 18 <br />";
+
+function funcSum($temp1, $temp2)
+{
+    if ($temp1 + $temp2 > 10)
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
+
+function funcEqual($temp1, $temp2)
+{
+    if ($temp1 == $temp2)
+    {
+        return TRUE;
+    }
+    if ($temp1 != $temp2)
+    {
+        return FALSE;
+    }
+}
+
+$test = 1;
+echo $test == 0 ? 'верно' : '';
+
+$age = 58;
+if ($age < 10 or $age > 99)
+{
+    echo "Число не входит в диапазон от 10 до 99 <br />";
+}
+else
+{
+    if ((($age % 10) + floor($age / 10)) < 10)
+    {
+        echo "Сумма цифр однозначна";
+    }
+    else
+    {
+        echo "Сумма цифр двузначна <br />";
+    }
+}
+
+$arr = [1, 2, 3];
+$count = 0;
+foreach($arr as $elem)
+{
+    $count++;
+}
+if($count == 3)
+{
+    $sum = 0;
+    foreach($arr as $elem)
+    {
+        $sum += $elem;
+    }
+    echo $sum . "<br /><br />";
+}
