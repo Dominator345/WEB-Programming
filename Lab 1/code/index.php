@@ -37,3 +37,16 @@ echo "<br />";
 $last_month = 1187.23;
 $this_month = 1089.98;
 echo ($last_month - $this_month) . "<br /> <br />";
+
+
+// Task 11 "Умножение и деление"
+
+echo "Task 11 <br /> <br />";
+
+$num_languages = 4;
+$month = 11;
+$days = $month * 16;
+$days_per_language = $days / $num_languages;
+
+echo $days_per_language;
+echo "<br /> <br />";
