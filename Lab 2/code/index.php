@@ -84,7 +84,7 @@ $temp2 = 3;
 echo ($temp1 % $temp2);
 echo "<br />";
 
-if ($temp1 % $temp2 == 0)
+if (0 === ($temp1 % $temp2))
 {
     echo 'Делится ' .($temp1 / $temp2);
     echo "<br />";
@@ -157,7 +157,7 @@ echo "<br />";
 $temp = 42;
 $arr_div = "";
 for ($i=1; $i<$temp; $i++){
-    if ($temp  % $i == 0)
+    if (0 === ($temp  % $i))
     {
         $arr_div .= " ".$i;
     }
@@ -169,7 +169,7 @@ $array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 $sum = 0;
 $counter = 0;
 foreach ($array as $elem){
-    if ($sum > 10){
+    if (10 < $sum){
         break;
     }
     else{
@@ -238,7 +238,7 @@ function sumNum($num)
         $count += $num % 10;
         $num = (int)($num / 10);
     }
-    if ($count > 9)
+    if (9 < $count)
     {
         return sumNum($count);
     }
@@ -341,7 +341,7 @@ echo "Task 18 <br />";
 
 function funcSum($temp1, $temp2)
 {
-    if ($temp1 + $temp2 > 10)
+    if (10 < ($temp1 + $temp2))
     {
         return TRUE;
     }
@@ -353,11 +353,11 @@ function funcSum($temp1, $temp2)
 
 function funcEqual($temp1, $temp2)
 {
-    if ($temp1 == $temp2)
+    if ($temp1 === $temp2)
     {
         return TRUE;
     }
-    if ($temp1 != $temp2)
+    if ($temp1 !== $temp2)
     {
         return FALSE;
     }
@@ -367,13 +367,13 @@ $test = 1;
 echo $test == 0 ? 'верно' : '';
 
 $age = 58;
-if ($age < 10 or $age > 99)
+if ((10 > $age) or (99 < $age))
 {
     echo "Число не входит в диапазон от 10 до 99 <br />";
 }
 else
 {
-    if ((($age % 10) + floor($age / 10)) < 10)
+    if (10 < (($age % 10) + floor($age / 10)))
     {
         echo "Сумма цифр однозначна";
     }
@@ -389,7 +389,7 @@ foreach($arr as $elem)
 {
     $count++;
 }
-if($count == 3)
+if(3 === $count)
 {
     $sum = 0;
     foreach($arr as $elem)
