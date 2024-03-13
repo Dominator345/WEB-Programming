@@ -248,3 +248,88 @@ function sumNum($num)
     }
 }
 echo sumNum(123457) . "<br /> <br />";
+
+
+// Task 17 "Массивы"
+
+echo "Task 17 <br />";
+
+$array = [];
+for ($i=0; $i<10;$i++)
+{
+    $temp = '';
+    for ($j=-1;$j<$i;$j++)
+    {
+        $temp .= 'x';
+    }
+    $array[$i] = $temp;
+}
+print_r($array);
+echo "<br />";
+
+function arrayFill($temp, $count)
+{
+    for($i=0;$i<$count;$i++)
+    {
+        $array[$i] = $temp;
+    }
+    return $array;
+}
+print_r(arrayFill('r', 8));
+echo "<br />";
+
+$array = [[1, 2, 3], [4, 5], [6]];
+$temp = 0;
+foreach($array as $miniArray)
+{
+    foreach($miniArray as $elem)
+    {
+        $temp += $elem;
+    }
+}
+echo $temp .= "<br />";
+
+$temp = 1;
+$array = [];
+for($i=0;$i<3;$i++)
+{
+    $miniArray = [];
+    for($j=0;$j<(3-$i);$j++)
+    {
+        $miniArray[$j] = $temp;
+        $temp++;
+    }
+    $array[$i] = $miniArray;
+}
+print_r($array);
+echo "<br />";
+
+$array = [2,5,3,9];
+$result = (($array[0] * $array[1]) + ($array[2] * $array[3]));
+echo $result .= "<br />";
+
+$user = 
+[
+    'name' => 'Dmitriy',
+    'surname' => 'Rudenko',
+    'patronymic' => 'Romanovich'
+];
+echo $user['name'] . " " . $user['surname'] . " " . $user['patronymic'] . "<br />";
+
+$year = 
+[
+    'year' => '2024',
+    'month' => '03',
+    'day' => '12'
+];
+echo $year['year'] . "-" . $year['month'] . "-" . $year['day'] . "<br />"; 
+
+$arr = ['a', 'b', 'c', 'd', 'e'];
+$temp = 0;
+foreach($arr as $elem)
+{
+    $temp++;
+}
+echo $temp . "<br />";
+echo $arr[$temp - 1] . "<br />";
+echo $arr[$temp - 2] . "<br /> <br />";
