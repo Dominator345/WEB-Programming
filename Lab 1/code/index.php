@@ -398,3 +398,18 @@ if($count == 3)
     }
     echo $sum . "<br /><br />";
 }
+
+
+//Task 19 "Циклы"
+
+echo "Task 19 <br />";
+
+for ($i=0;$i<21;$i++)
+{
+    for($j=0;$j<$i;$j++)
+    {
+        echo 'x';
+    }
+    echo "<br />";
+}
+echo "<br />";
