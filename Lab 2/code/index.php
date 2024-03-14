@@ -87,13 +87,12 @@ echo "<br />";
 if (0 === ($temp1 % $temp2))
 {
     echo 'Делится ' .($temp1 / $temp2);
-    echo "<br />";
 }
 else
 {
     echo 'Делится с остатком ' . ($temp1 % $temp2);
-    echo "<br />";
 }
+echo "<br />";
 
 $st = pow(2, 10);
 echo $st . "<br />";
@@ -242,10 +241,7 @@ function sumNum($num)
     {
         return sumNum($count);
     }
-    else
-    {
-        return $count;
-    }
+    return $count;
 }
 echo sumNum(123457) . "<br /> <br />";
 
