@@ -1,6 +1,8 @@
 <?php
 
-// Part a.
+session_start();
+
+// Task 1 Part a.
 
 echo 'Task 1 (a)' . '<br />';
 
@@ -16,7 +18,7 @@ foreach($matches[0] as $match)
 echo '<br />';
 
 
-// Part b.
+// Task 1 Part b.
 
 echo 'Task 2 (b)' . '<br />';
 
@@ -28,4 +30,38 @@ function replaceCube($match) : string
 $str = 'a1b2c3';
 $wantedString = '/[0-9]/';
 $result = preg_replace_callback($wantedString, 'replaceCube', $str);
-echo 'Result: ' . '<br />' . $result;
+echo 'Result: ' . '<br />' . $result . '<br /><br />';
+
+echo 'Task 2 (a)' . '<br />';
+
+// Task 2 Part a
+?>
+
+
+<!DOCTYPE html>
+
+<body>
+    <form method = 'Post'>
+        <br>
+        <textarea name='inputText' rows='7' cols='70'></textarea>
+        <br><br>
+        <button type='submit' name='submit'>Подсчитать</button>
+    </form>
+</body>
+
+<?php
+    if ('POST' === $_SERVER['REQUEST_METHOD']) {
+        if(isset($_POST['submit'])){
+            $text = $_POST['inputText'];
+            
+            $wordCount = str_word_count($text);
+            $charCount = strlen($text);
+
+            echo 'Количество слов = ' . $wordCount . '<br />';
+            echo 'Количество символов = ' . $charCount . '<br /';
+        }
+    }
+    echo '<br />';
+?>
+
+</html>
