@@ -39,7 +39,9 @@ echo 'Task 2 (a)' . '<br />';
 
 
 <!DOCTYPE html>
-
+<head>
+    <title>Task 2 Part a</title>
+</head>
 <body>
     <form method = 'Post'>
         <br>
@@ -61,7 +63,13 @@ echo 'Task 2 (a)' . '<br />';
             echo 'Количество символов = ' . $charCount . '<br /';
         }
     }
-    echo '<br />';
+    echo '<br />' . '<br />';
 ?>
 
-</html>
+<html lang="en">
+<body>
+    <form method='post'>
+        
+    <a href="Task2b.php">Task 2.</a>
+    </form>
+</body>
