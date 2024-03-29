@@ -22,3 +22,8 @@ foreach ($user as $key => $value)
 echo '</ul>';
 
 ?>
+
+<!DOCTYPE html>
+<p>
+  <a href="Task3.php">Task 2 Part c</a>.
+</p>
