@@ -36,6 +36,38 @@
                 <th>Description</th>
             </thead>
         </table>
+            <tbody>
+                <?php
+                require_once __DIR__."/vendor/autoload.php";
+                
+                $client = new \Google_Client();
+                $client->setApplicationName('Google Sheets API');
+                $client->setScopes([\Google_Service_Sheets::SPREADSHEETS]);
+                $client->setAccessType('offline');
+                $path = 'googleAPI.json';
+                $client->setAuthConfig($path);
+                
+                $service = new \Google_Service_Sheets($client);
+                $range = 'A1:D20';
+                
+                $spreadsheetId = "1_gX7ZgUKcoog_dYvWZ4o6XdeaUtWqdlhI_FMYhk_Cp4";
+                $spreadsheet = $service->spreadsheets_values->get($spreadsheetId, $range);
+                
+                $values = $spreadsheet->getValues();
+                
+                if (!empty($values)) {
+                    foreach ($values as $row) {
+                        echo "<tr>";
+                        echo "<td>{$row[0]}</td>";
+                        echo "<td>{$row[1]}</td>";
+                        echo "<td>{$row[2]}</td>";
+                        echo "<td>{$row[3]}</td>";
+                        echo "</tr>";
+                    }
+                }
+                ?>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
