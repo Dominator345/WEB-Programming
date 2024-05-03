@@ -1,13 +1,14 @@
 <?php
+require_once __DIR__."/vendor/autoload.php";
+
 if (false === isset($_POST['email'], $_POST['category'], $_POST['title'], $_POST['description']))
 {
     redirectToHome();
 }
-
-$category = $_POST['category'];
-$description = $_POST['description'];
-$title = $_POST['title'];
 $email = $_POST['email'];
+$category = $_POST['category'];
+$title = $_POST['title'];
+$description = $_POST['description'];
 
 $client = new Google_Client();
 $client->setApplicationName("LabaFour");
@@ -27,12 +28,11 @@ $param = ["valueInputOption" => "RAW"];
 
 $result = $service->spreadsheets_values->append($spreadsheetId, $range, $body, $param);
 
-
 redirectToHome();
 
 function redirectToHome() : void
 {
-    header("location: /Task3.php");
+    header("location: /index.php");
     exit();
 }
 ?>
