@@ -1,0 +1,9 @@
+{
+    "name": "user1/code",
+    "version": "dev-main",
+    "type": "project",
+    "require": {
+        "google/apiclient": "^2.16",
+        "asimlqt/php-google-spreadsheet-client": "^3.0"
+    }
+}
